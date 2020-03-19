@@ -1,0 +1,442 @@
+/*================ RESET ===============*/
+
+html body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+/*================ SuperInfo ===============*/
+
+.superinfo-bg{
+    background-color: #122AB2;
+}
+
+.superinfo{
+    display: flex;
+    justify-content: space-between;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 10px;
+    flex-wrap: wrap;
+    font-family: 'Nunito', sans-serif;
+}
+
+.superinfo a, p{
+    color: white;
+    margin: 0px 10px 10px 10px ;
+}
+
+/*================ MENU ================*/
+
+.menu-bg{
+    background: #2C70FF;
+    font-family: 'Nunito', sans-serif;
+}
+
+.menu{
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Nunito', sans-serif;
+    padding: 15px 0;
+}
+
+.menu-logo a{
+    color: white;
+    font-size: 3em;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.menu-nav ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.menu-nav li{
+    font-size: 1.25em;
+    
+}
+
+.menu-nav a{
+    color: white;
+    padding: 5px 15px;
+}
+
+/*====== INTRODUÇÃO ========*/
+
+.introducao{
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 60px 0px 60px 10px;
+    font-size: 3em;
+    line-height: 1;
+}
+
+@media (max-width: 600px){
+    .introducao{
+        font-size: 2.5em;
+    }
+}
+
+@media (max-width: 400px){
+    .introducao{
+        font-size: 2em;
+    }
+}
+
+/*========== Sobre ===========*/
+
+.sobre{
+    max-width: 960px;
+    margin: 0 auto;
+    border-top: 4px solid #2C70FF;
+    border-bottom: 4px solid #2C70FF;
+    padding: 60px 0;
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.sobre-info{
+    flex: 2 1 300px;
+    margin: 0 10px;
+}
+
+.sobre-info h1{
+    font-size: 3em;
+    margin-bottom: .5em;
+}
+
+.sobre-info p{
+    color: #848484;
+    margin-bottom: 1.5em;
+    text-align: justify;
+    font-size: 1.25em;
+    line-height: 1.4;
+}
+
+.sobre-img{
+    flex: 1 1 160px;
+    margin: 0 10px;
+    padding: 5px 0;
+}
+
+@media(max-width: 600px){
+
+    .sobre-img img{
+        min-width: 100%;
+    }
+
+}
+
+/*========= Produtos ==========*/
+
+.produtos{
+    max-width: 960px;
+    margin: 60px auto;
+}
+
+.produtos h1{
+    font-size: 3em;
+    margin: 0 10px 60px 10px;
+}
+
+.produtos-container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+
+.produtos-item img{
+    max-width: 100%;
+    display: block;
+}
+
+.produtos-item{
+    flex: 1;
+    min-width: 175px;
+    margin: 0 10px 10px 10px;
+
+}
+
+.produtos-item h2{
+    padding: 15px 10px;
+    background-color:#F7F7F7;
+    font-size: 2.5em;
+}
+
+.purple{
+    border-top: 8px solid #6D326A;
+}
+
+.pink{
+    border-top: 8px solid #F53D95;
+}
+
+.blue{
+    border-top: 8px solid #0100BE;
+}
+
+/*========= Preços ==========*/
+
+.preco{
+    background-color: #F7F7F7;
+    padding: 60px;
+
+    display: flex;
+    flex: 1;
+    align-items: flex-end;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.preco-item{
+    border: 4px solid #fff;
+    padding: 60px 90px;
+    margin-right: 10px;
+    text-align: center;
+    min-width: 190px;
+    margin-bottom: 10px;
+}
+
+.preco-item h2{
+    font-size: 2.50em;
+    color: #A4A4A4;
+    margin: 20px 0;
+    
+}
+
+.preco-item span{
+    font-size: 2em;
+    font-weight: bold;
+    border-top: 3px solid #fff;
+    border-bottom: 3px solid #fff;
+    padding: 5px 0;
+    margin: 50px;
+}
+
+.preco-item sup{
+    font-size: 1rem;
+}
+
+.preco-item ul{
+    margin-top: 20px;
+    line-height: 2.5;
+    margin-bottom: 30px;
+}
+
+.preco-item li{
+    font-style: italic;
+    color: #848484;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.preco-item li::after{
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50px;
+    background-color: #2c70ff;
+    display: block;
+}
+
+.preco-item a{
+    padding: 10px 35%;
+    border: 1px solid #2c70ff;
+}
+
+@media (max-width: 800px){
+
+    .preco{
+        padding: 40px;
+    }
+
+
+    .preco-item{
+        padding: 40px 100px;
+        margin-right: 5px;
+        margin-left: 5px;
+    }
+
+}
+
+@media (max-width: 430px){
+
+    .preco{
+        padding: 30px;
+    }
+
+    .preco-item{
+        padding: 15px 90px;
+        margin-right: 5px;
+        margin-left: 5px;
+    }
+
+    .preco-item h2{
+        font-size: 2.50em;
+        color: #A4A4A4;
+        margin: 10px 0;
+    }
+
+    .preco-item a{
+        padding: 5px 35%;
+    }
+
+    .preco-item ul{
+        margin-top: 10px;
+        line-height: 2.5;
+        margin-bottom: 10px;
+    }
+}
+
+/* =========== Qualidade ================*/
+
+.qualidade{
+    max-width: 960px;
+    margin: 60px auto;
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.qualidade-item{
+    flex: 1 1;
+    min-width: 300px;
+}
+
+.qualidade h2{
+    padding: 30px 0;
+    font-size: 2em;
+    margin-left: 10px;
+    color: #a4a4a4;
+}
+
+.qualidade-item p{
+    color: #917C7C;
+    text-align: justify;
+    font-size: 1.2em;
+    line-height: 2;
+}
+
+.qualidade-item h2::before{
+    content: '';
+    width: 8px;
+    height: 30px;
+    background-color: #2c70ff;
+    display: inline-block;
+    margin-right: 10px;
+    align-items: center;
+}
+
+.qualidade-item:nth-of-type(3n+1) h2::before{
+    background-color: #ae81ff;
+}
+
+.qualidade-item:nth-of-type(3n+2) h2::before{
+    background-color: #f9265e;
+}
+
+.qualidade-item:nth-of-type(3n+3) h2::before{
+    background-color: #66d9eb;
+}
+
+/* =========== Newsletter ================*/
+
+.newsletter{
+    background-color:#f7f7f7;
+    padding: 60px calc((100% - 960px)/2);
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.newsletter-info{
+    flex: 1;
+    min-width: 260px;
+    margin: 0 10px;
+}
+
+.newsletter-info h1{
+    font-size: 3em;
+    color: #A4A4A4;
+}
+
+.newsletter-info p{
+    color: #A4A4A4;
+    max-width: 250px;
+    font-style: italic;
+    font-size: 1.25em;
+}
+
+.newsletter-form{
+    display: flex;
+    flex-wrap: wrap;
+    flex: 2 1;
+    align-self: center;
+    min-width: 260px;
+    margin: 0 10px
+}
+
+.newsletter-form input{
+   flex: 3 1;
+   min-width: 260px;
+   padding: 10px;
+   border: 1px solid #2c70ff;
+   font-style: italic;
+   font-family: 'Nunito', sans-serif;
+   background: transparent;
+}
+
+.newsletter-form button{
+    flex: 1 1;
+    min-width: 200px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: #2c70ff;
+    color: white;
+    margin: 0;
+    cursor: pointer;
+    border:0px;
+    padding: 15px 10px;
+}
+
+/*========= Footer ==========*/
+
+.footer{
+    display: flex;
+    background-color:#2c70ff ;
+    height: 200px;
+    align-items: center;
+}
+
+.footer p{
+    text-align: center;
+    flex: 1;
+    font-size: 2.25em;
+    color: #122ab2;
+}
+
