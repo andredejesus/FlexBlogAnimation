@@ -43,20 +43,51 @@ ul{
 
 /*================ MENU ================*/
 
-.menu-bg{
-    background: #2C70FF;
-    font-family: 'Nunito', sans-serif;
-}
+
 
 .menu{
-    max-width: 960px;
-    margin: 0 auto;
+    max-width: 100%;
+    min-width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     font-family: 'Nunito', sans-serif;
     padding: 15px 0;
+    background: #2C70FF;
+    font-family: 'Nunito', sans-serif;
+    padding: 15px calc((100% - 100%)/2);
+    transition-duration: .5s;
+    position: fixed;
+
+}
+
+.scroll-menu{
+    max-width: 100%;
+    min-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Nunito', sans-serif;
+    padding: 15px 0;
+    background: #122AB2;
+    font-family: 'Nunito', sans-serif;
+    padding: 15px calc((100% - 100%)/2);
+    position: fixed;
+    opacity: 90%;
+    margin-top: -3.9%;
+    transition-duration: 1s;
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.div-falsa{
+    max-width: 100%;
+    min-width: 100%;
+    background-color: #fff;
+    padding: 15px calc((100% - 100%)/2);
+    padding: 48px 0;
+    opacity: 100%;
 }
 
 .menu-logo a{
@@ -66,20 +97,108 @@ ul{
     margin-left: 10px;
 }
 
+menu-logo{
+    animation-duration: 2s;
+    animation-delay: 1.s;
+    animation-iteration-count: unset;
+}
+
+@keyframes moverLogo{
+    15%{
+        transform: translateX(5px);
+    }
+
+    30%{
+        transform: translateX(-5px);
+    }
+
+    50%{
+        transform: translateX(3px);
+    }
+
+    65%{
+        transform: translateX(-3px);
+    }
+
+    80%{
+        transform: translateX(2px);
+    }
+
+    100%{
+        transform: translateX(-2px);
+    }
+}
+
+
+.menu-logo:hover{
+    animation-name: moverLogo;
+    animation-delay: 0.1s;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+}
+
+
+
+
+
 .menu-nav ul{
     display: flex;
     flex-wrap: wrap;
 }
 
+/* Efeito de hover: Background de expansão da esquerda para direita */
+
 .menu-nav li{
-    font-size: 1.25em;
-    
+    font-size: 1.25em; 
+    position: relative;
 }
+
+.menu-nav li::before{
+    content: '';
+    height: 100%;
+    width:0;
+    position: absolute;
+}
+
+.menu-nav li:hover::before{
+    width: 100%;
+    transition: all 1s ease;
+    background-color: #fff;
+    opacity: 50%;
+}
+
+/*======== Termina aqui ========*/
 
 .menu-nav a{
     color: white;
     padding: 5px 15px;
 }
+
+
+
+efeito-botao{
+
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #6D326A;
+}
+
+efeito-botao::before{
+    content: '';
+    background-color: #fff;
+    opacity: 50%;
+    padding: 5px 0px;
+    position: absolute;
+   
+}
+
+efeito-botao:hover::before{
+    width: 100%;
+    transition: all 2s ease;
+    padding: 5px 15px;
+}
+
+
 
 /*====== INTRODUÇÃO ========*/
 
