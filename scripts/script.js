@@ -1,7 +1,9 @@
-
+/*Interações do header*/
 
 const $divMenuBG = document.querySelector('header');
 const $divMenu = document.querySelector('.menu');
+
+
 
 window.addEventListener('scroll', ()=>{
 
@@ -18,14 +20,37 @@ window.addEventListener('scroll', ()=>{
 
 });
 
-const $logoMenu = document.querySelector('menu-logo');
+const $introducao = document.querySelector('.introducao').innerText;
 
-$logoMenu.addEventListener('mouseover', ()=>{
+function maquinaEscrever(elemento){
 
-    setInterval(()=>{
-        $logoMenu.classList.add('animated',   'bounce');
-    }, 1000)
+   const listaDePalavras =  elemento.split('');
 
+   document.querySelector('.introducao').innerHTML = '';
+
+   listaDePalavras.forEach((letra, i)=>{
+        setTimeout(()=>{
+            document.querySelector('.introducao').innerHTML += letra;
+        }, 80 * i);
+   });
     
 
-})
+}
+
+maquinaEscrever($introducao);
+
+const $teste = document.querySelector('.header-preco-item');
+
+const $teste2 = document.querySelector('.preco');
+
+$teste.addEventListener('mouseover', ()=>{
+
+    $teste2.classList.add('preco-teste');
+
+    //$teste2.appendChild
+    
+});
+
+const sheet = window.document.styleSheets[0];
+
+sheet.insertRule()

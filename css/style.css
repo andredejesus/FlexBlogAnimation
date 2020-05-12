@@ -36,7 +36,7 @@ ul{
     font-family: 'Nunito', sans-serif;
 }
 
-.superinfo a, p{
+.superinfo > a, p{
     color: white;
     margin: 0px 10px 10px 10px ;
 }
@@ -57,11 +57,12 @@ ul{
     background: #2C70FF;
     font-family: 'Nunito', sans-serif;
     padding: 15px calc((100% - 100%)/2);
-    transition-duration: .5s;
+    transition-duration: .8s;
     position: fixed;
 
 }
 
+/*Classe adicionada ao realizar um scroll na página*/
 .scroll-menu{
     max-width: 100%;
     min-width: 100%;
@@ -79,6 +80,7 @@ ul{
     margin-top: -3.9%;
     transition-duration: 1s;
     transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 100;
 }
 
 .div-falsa{
@@ -97,12 +99,7 @@ ul{
     margin-left: 10px;
 }
 
-menu-logo{
-    animation-duration: 2s;
-    animation-delay: 1.s;
-    animation-iteration-count: unset;
-}
-
+/*Animação do logo*/
 @keyframes moverLogo{
     15%{
         transform: translateX(5px);
@@ -137,10 +134,6 @@ menu-logo{
     animation-iteration-count: 1;
 }
 
-
-
-
-
 .menu-nav ul{
     display: flex;
     flex-wrap: wrap;
@@ -173,31 +166,6 @@ menu-logo{
     color: white;
     padding: 5px 15px;
 }
-
-
-
-efeito-botao{
-
-    position: relative;
-    overflow: hidden;
-    border: 1px solid #6D326A;
-}
-
-efeito-botao::before{
-    content: '';
-    background-color: #fff;
-    opacity: 50%;
-    padding: 5px 0px;
-    position: absolute;
-   
-}
-
-efeito-botao:hover::before{
-    width: 100%;
-    transition: all 2s ease;
-    padding: 5px 15px;
-}
-
 
 
 /*====== INTRODUÇÃO ========*/
@@ -253,10 +221,40 @@ efeito-botao:hover::before{
     line-height: 1.4;
 }
 
+@keyframes rotacionarImagens{
+    15%{
+        transform: rotateX(15deg);
+    }
+
+    30%{
+        transform: rotateX(-15deg);
+    }  
+}
+
+@keyframes zoomImagem{
+    5%{
+        transform: scale(1.02);
+    }
+}
+
 .sobre-img{
     flex: 1 1 160px;
     margin: 0 10px;
     padding: 5px 0;
+}
+
+.sobre-imagem-1:hover{
+    animation-name: rotacionarImagens;
+    cursor: pointer;
+    animation-duration: 2s;
+    transition: 1s;
+}
+
+.sobre-imagem-2:hover{
+    animation-name: zoomImagem;
+    animation-duration: 1s;
+    transition: all .5s ease;
+    cursor: pointer;
 }
 
 @media(max-width: 600px){
@@ -272,6 +270,7 @@ efeito-botao:hover::before{
 .produtos{
     max-width: 960px;
     margin: 60px auto;
+    
 }
 
 .produtos h1{
@@ -294,14 +293,56 @@ efeito-botao:hover::before{
     flex: 1;
     min-width: 175px;
     margin: 0 10px 10px 10px;
-
+    cursor: pointer;
 }
 
-.produtos-item h2{
+header h2{
     padding: 15px 10px;
     background-color:#F7F7F7;
     font-size: 2.5em;
 }
+
+.produtos-item main{
+    position: relative; 
+}
+
+
+main > .sombra{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    opacity: 0;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: center;
+}
+
+main > .sombra:hover{
+    opacity: 70%;
+    transition: 1s;
+    background-color: #000;
+}
+
+main > .sombra p{
+
+    text-align: center;
+    margin: 10px 10px;
+}
+
+main > .sombra button{
+    font-size: 1.5em;
+    font-weight: bold;
+    background-color: #fff;
+    color: #000;
+    border-radius: 5px;
+    border: none;
+    padding: 5px 37px;
+    margin: 10px 10px;
+}
+
 
 .purple{
     border-top: 8px solid #6D326A;
@@ -316,6 +357,97 @@ efeito-botao:hover::before{
 }
 
 /*========= Preços ==========*/
+
+.preco{
+
+    background-color: #F7F7F7;
+    padding: 60px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.preco-item{
+    text-align: center;
+}
+
+
+.preco-item header{
+    background-color: #fff;
+    padding: 5px 150px;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+
+    display: flex;
+}
+
+.preco-item header > p{
+    color: #000;
+    font-size: 1.8em;
+    font-weight: bold;
+ 
+}
+
+.preco-item header > span{
+    font-weight: bold;
+    font-size: 2.2em;
+}
+
+.preco-item sup{
+    font-size: 1rem;
+}
+
+.conteudo{
+    background-color: #2C70FF;
+    padding: 5px 50px;
+}
+
+.preco-teste > .preco-item:nth-child(1) > .conteudo{
+    background-color: rgb(56, 66, 87);
+    padding: 5px 50px;
+}
+
+.preco-teste > .preco-item:nth-child(2) > .conteudo{
+    background-color: rgb(56, 66, 87);
+    padding: 5px 50px;
+}
+
+.preco-teste > .preco-item:nth-child(3) > .conteudo{
+    background-color: rgb(56, 66, 87);
+    padding: 5px 50px;
+}
+
+.conteudo > ul{
+    margin-top: 20px;
+    line-height: 2.5;
+    margin-bottom: 30px;
+    padding: 0 100px;
+    text-align: left;
+    color: #fff;
+}
+
+.conteudo > li{
+    font-style: italic;
+    color: #fff;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.conteudo > button{
+    padding: 10px 80px;
+    background-color: #fff;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+
+/*
 
 .preco{
     background-color: #F7F7F7;
@@ -429,7 +561,7 @@ efeito-botao:hover::before{
         line-height: 2.5;
         margin-bottom: 10px;
     }
-}
+}*/
 
 /* =========== Qualidade ================*/
 
